@@ -1,8 +1,12 @@
-#CSVファイルを取り込む
-with open('source-sheet.csv',encoding = 'utf-8') as f:
+def file_load():
+    #CSVファイルを取り込む
 
-#ファイルの読み込み、検索対象になる
-    source = f.read()
+    with open('source-sheet.csv',encoding = 'utf-8') as f:
+
+    #ファイルの読み込み、検索対象になる
+    
+        source = f.read()  
+
 
 # 検索ツール
 def search():
@@ -25,6 +29,7 @@ def search():
         with open('source-sheet.csv','a',encoding='utf-8') as f:
             f.write(','+word)
 
+file_load()
 search()
 
 
